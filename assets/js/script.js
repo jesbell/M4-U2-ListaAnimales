@@ -1,3 +1,5 @@
+//Creando las clases para el ejercicio
+//Clase Propietario
 class Propietario {
     constructor(name, adress, phone){
         this._name = name;
@@ -10,7 +12,7 @@ class Propietario {
     }
 
 }
-
+//Clase hija Animal (de Propietario)
 class Animal extends Propietario{
     constructor(name, adress, phone, tipo){
         super(name, adress, phone);
@@ -21,3 +23,19 @@ class Animal extends Propietario{
         return `El tipo de animal es un ${this._tipo}`;
     }
 }
+//Clase hija Mascota ( de Animal)
+class Mascota extends Animal{
+    constructor(name, adress, phone, tipo, namePet){
+        super(name, adress, phone, tipo);
+        this._namePet = namePet;
+    }
+
+    get namePet(){
+        return this._namePet;
+    }
+
+    set namePet(newNamePet){
+        this._namePet = newNamePet;
+    }
+}
+
